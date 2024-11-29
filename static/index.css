@@ -1,6 +1,6 @@
 /* Custom CSS for black theme */
 body {
-  background-image: url('static/bg.png');
+  background-image: url('bg.png');
   background-size: 100%;
   color: #fff;
   margin: 0;
