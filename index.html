@@ -4,46 +4,47 @@
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <title>TurboX</title>
     <style>
-      html {
-      margin: 0;
-      padding: 0;
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Ensure the body and html take up the full height */
       }
       body {
-      margin: 0;
-      padding: 0;
+        display: flex; /* Use flexbox for easier layout management */
       }
       .side-bar {
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      width: 10%;
-      float: left;
-      height: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: black;
+        width: 10%;
+        height: 100%; /* Take up the full height */
+        display: flex;
+        flex-direction: column; /* Arrange links vertically */
+        align-items: center;
+        padding-top: 10px;
       }
       .side-bar a {
-        margin-top: 10px;
-        padding: 0;
+        margin: 10px 0; /* Add spacing between links */
         text-decoration: none;
         color: white;
       }
-      .side-bar p {
-        margin-top: 10px;
-      }
       .iframe {
-        float: right;
+        flex-grow: 1; /* Let the iframe take up the remaining space */
+        height: 100%; /* Ensure the iframe is full height */
+      }
+      .iframe iframe {
+        width: 100%; /* Ensure iframe fills its container */
+        height: 100%;
+        border: none; /* Remove iframe border */
       }
     </style>
   </head>
   <body>
     <div class="side-bar">
-    <ul>
-      <li><a href="search.html"><p>Search</p></a></li>
-      <li><a href="about.html"><p>About</p></a></li>
-    </ul>
+      <a href="search.html"><p>Search</p></a>
+      <a href="about.html"><p>About</p></a>
     </div>
     <div class="iframe">
-      <iframe src="static/index.html" height="100%" width="90%"></iframe>
+      <iframe src="static/index.html"></iframe>
     </div>
   </body>
 </html>
