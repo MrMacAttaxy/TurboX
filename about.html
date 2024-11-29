@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>About - TurboX</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Full height */
+      }
+      body {
+        display: flex; /* Flexbox for layout */
+      }
+      .side-bar {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: black;
+        width: 10%;
+        height: 100%; /* Full height */
+        display: flex;
+        flex-direction: column; /* Arrange links vertically */
+        align-items: center;
+        padding-top: 10px;
+      }
+      .side-bar a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+      }
+      .content {
+        flex-grow: 1; /* Takes remaining space */
+        padding: 20px;
+        overflow-y: auto; /* Adds scroll if content is too large */
+        background-color: #f4f4f4; /* Light background for contrast */
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="side-bar">
+      <a href="search.html"><p>Search</p></a>
+      <a href="about.html"><p>About</p></a>
+    </div>
+    <div class="content">
+      <h1>About TurboX</h1>
+      <p>
+        Welcome to TurboX, your one-stop solution for all blockers.
+        Our platform is designed to provide fast, reliable, and efficient proxy to meet
+        your needs.
+      </p>
+      <p>
+        At TurboX, we prioritize our users first.
+        Our team is dedicated to constantly improving and delivering the best possible solutions.
+      </p>
+    </div>
+  </body>
+</html>
