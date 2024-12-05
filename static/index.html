@@ -3,13 +3,25 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:wght@300..900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
       <style>
         body {
-          background-image: url('/bg.png');
+          background-image: url('bg.png');
           background-size: 100%;
           color: #fff;
           margin: 0;
           padding: 0;
+        }
+
+        .anton {
+          font-family: "Anton", sans-serif;
+          font-weight: 400;
+        }
+
+        .rubik {
+          font-family: "Rubik", sans-serif;
         }
 
         #header {
@@ -82,7 +94,7 @@
           outline: none;
           box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
         #footer {
           position: fixed;
           left: 0;
@@ -116,12 +128,10 @@
         }
       </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
    </head>
    <body>
       <div id="header">
-         <img src="/logo.png" style="border-radius: 100vh; border-style: solid; margin: 75px; width: 200px; height: 200px">
+         <img src="logo.png" style="border-radius: 100vh; border-style: solid; margin: 75px; width: 200px; height: 200px">
       </div>
       <div id="content">
          <h1>Search the Web <i>without restrictions</i> <br />with Turbo-X proxy!</h1>
@@ -131,9 +141,9 @@
             <input id="uv-address" type="text" placeholder="Search..." class="form__input"/>
           </form>
           <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
+            <p class="anton">If the proxy does not work then reload the proxy and try again</p>
           </div>
+
       </div>
       <script src="uv/uv.bundle.js" defer></script>
       <script src="uv/uv.config.js" defer></script>
