@@ -3,21 +3,133 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-      <link rel="stylesheet" href="index.css">
+      <style>
+        /* Custom CSS for black theme */
+        body {
+          background-image: url('bg.png');
+          background-size: 100%;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+        }
+
+        #header {
+          padding: 20px;
+          text-align: center;
+        }
+
+        #header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-family: 'Arial', sans-serif;
+          color: #fff;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        #header img {
+          width: 20%;
+          height: auto;
+        }
+
+        #content {
+          text-align: center;
+          padding: 20px;
+          margin-top: -4%;
+        }
+
+        #content h1 {
+          font-size: 24px;
+          text-transform: uppercase;
+          font-family: 'Open Sans', sans-serif;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+
+        #searchbar {
+          text-align: center;
+          margin: 20px auto;
+        }
+
+        .form__input {
+          padding: 10px;
+          border: none;
+          border-radius: 2vh;
+          font-size: 16px;
+          width: 300px;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+          background-color: black;
+          text-align: center;
+          color: #fff;
+        }
+
+        a {
+          text-decoration: none;
+          color:white;
+          width:50px;
+          height:50px;
+          padding-right: 1px;
+          padding-left: 1px;
+          text-align: center;
+          align-self: center;
+        }
+
+        .form__input::placeholder {
+          color: white;
+          text-align: center;
+        }
+
+        .form__input:focus {
+          outline: none;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        #footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          border-top-width: 1px;
+          border-top-style: solid;
+          font-family: 'Open Sans', sans-serif;
+          width: 100%;
+          height:15px;
+          background-color: #000;
+          padding-top: 7.5px;
+          padding-bottom: 10px;
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          border-radius: 2vh 2vh 0vh 0vh;
+        }
+
+        #footer p {
+          margin: 0;
+        }
+
+        .fa {
+          font-size: 24px;
+          margin-right: 10px;
+          color: #fff;
+        }
+
+        .fa:hover {
+          color: #aaa;
+        }
+      </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
    </head>
    <body>
       <div id="header">
-         <h1 style="margin: 100px;"><b>Turbo-X Proxy</b></h1>
+         <img src="logo.png" style="border-radius: 100vh; border-style: solid; margin: 75px; width: 200px; height: 200px">
       </div>
       <div id="content">
          <h1>Search the Web <i>without restrictions</i> <br />with Turbo-X proxy!</h1>
 
-         <form id="uv-form"">
+         <form id="uv-form">
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+            <input id="uv-address" type="text" placeholder="Search..." class="form__input"/>
           </form>
           <div class="desc left-margin">
             <p id="uv-error"></p>
