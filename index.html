@@ -2,49 +2,92 @@
 <html>
   <head>
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
     <title>Turbo-X</title>
     <style>
       html, body {
         margin: 0;
         padding: 0;
-        height: 100%; /* Ensure the body and html take up the full height */
+        height: 100%;
       }
       body {
-        display: flex; /* Use flexbox for easier layout management */
+        display: flex;
+        flex-direction: column;
+      }
+      .top-bar {
+        background-color: black;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .top-bar .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .top-bar .nav-links {
+        display: flex;
+        gap: 15px;
+      }
+      .top-bar .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        transition: color 0.3s;
+      }
+      .top-bar .nav-links a:hover {
+        color: violet;
       }
       .side-bar {
         font-family: 'Courier New', Courier, monospace;
         background-color: black;
-        width: 10%;
-        height: 100%; /* Take up the full height */
+        width: 3%;
+        height: 100%;
         display: flex;
-        flex-direction: column; /* Arrange links vertically */
+        flex-direction: column;
         align-items: center;
         padding-top: 10px;
       }
       .side-bar a {
-        margin: 10px 0; /* Add spacing between links */
+        margin: 10px 0;
         text-decoration: none;
         color: white;
+        transition: 0.2s;
+        width: 100%;
+        height: 5%;
+        text-align: center;
       }
       .iframe {
-        flex-grow: 1; /* Let the iframe take up the remaining space */
-        height: 100%; /* Ensure the iframe is full height */
+        flex-grow: 1;
+        height: 100%;
+        background-color: black;
       }
       .iframe iframe {
-        width: 100%; /* Ensure iframe fills its container */
+        width: 100%;
         height: 100%;
-        border: none; /* Remove iframe border */
+        border: none;
+        border-radius: 8vh 0vh 0vh 0vh;
       }
     </style>
   </head>
   <body>
-    <div class="side-bar">
-      <a href="index.html"><p>Search</p></a>
-      <a href="about.html"><p>About</p></a>
+    <div class="top-bar">
+        <img src="logo.png" height="100px" width="150px">
+      </div>
     </div>
-    <div class="iframe">
-      <iframe src="static/index.html"></iframe>
+    <div style="display: flex; flex: 1;">
+      <div class="side-bar">
+        <a href="/"><p>&#x1F50D;</p></a>
+        <a href="/about.html"><p>&#9432;</p></a>
+        <a href="https://discord.gg/8SUD4Ax37V"><p><i class="fa fa-discord" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="iframe">
+        <iframe src="/static/index.html"></iframe>
+      </div>
     </div>
   </body>
 </html>
